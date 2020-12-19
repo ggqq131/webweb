@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>同程旅游</title>
+  <style type="text/css">
+    * {
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+    .clear::after {
+      content: '';
+      height: 0;
+      display: block;
+      clear: both;
+    }
+    .container {
+      width: 1202px;
+      margin: 0 auto;
+    }
+    .header {
+      height: 80px;
+      background: white;
+    }
+    .logo {
+      margin-top: 10px;
+      float: left;
+    }
+    .nav {
+      float: right;
+      width: 800px;
+    }
+    .nav li {
+      float: left;
+    }
+    .nav li a {
+      display: block;
+      width: 160px;
+      text-align: center;
+      padding: 24px 0;
+      font-size: 20px;
+      color: black;
+      border-bottom: 3px solid white;
+    }
+    .nav li a:hover {
+      color: orange;
+      border-color: orange;
+    }
+    .product {
+      background: #ddd;
+      height: 580px;
+      padding-top: 20px;
+    }
+    .visa-big {
+      float: left;
+    }
+    .visa-big img {
+      width: 398px;
+    }
+    .visa-small {
+      float: right;
+      width: 804px;
+    }
+    .visa-small li {
+      float: left;
+      margin-bottom: 4px;
+      margin-left: 4px;
+    }
+    .visa-small img {
+      width: 398px;
+      height: 275px;
+    }
+    .product li {
+      position: relative;
+    }
+    .product p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 47px;
+      line-height: 47px;
+      font-size: 18px;
+      background: rgb(0, 0, 0, 0.4);
+      color: white;
+      padding-left: 38px;
+    }
+    .product span {
+      display: inline-block;
+      font-size: 26px;
+      margin-left: 10px;
+    }
+    .visa-big p {
+      height: 73px;
+      line-height: 73px;
+      font-size: 20px;
+    }
+    .visa-big span {
+      font-size: 30px;
+    }
+    .footer {
+      height: 120px;
+      line-height: 120px;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript">
+    var msg;
+    function jumpToBaidu(){
+      window.location.href = "https://www.baidu.com";
+    }
+    function jump(){
+      alert("即将跳转到主页");
+      msg=setTimeout(jumpToBaidu, 1000);
+    }
+    function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+    }
+    function changeText(id) {
+  id.innerHTML = "日本";
+    }
+  </script>
+</head>
+
+<body>
+  <button onclick="displayDate()">时间</button>
+<p id="demo"></p>
+  <div class="header ">
+    <div class="container">
+      <img src="img/logotc.png" alt="" class="logo">
+      <ul class="nav clear">
+        <li><a href="#"><input type="button" value="首页" onclick="jump();" /></a></li>
+        <li><a href="#">热门路线</a></li>
+        <li><a href="#">签证推荐</a></li>
+        <li><a href="#">酒店预订</a></li>
+        <li><a href="#">使命愿景</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="product">
+    <div class="container clear">
+      <div class="visa-big">
+        <ul>
+          <li>
+            <img src="img/visa1.jpg" alt="">
+            <p onclick="changeText(this)">日本旅游签证 <span>￥420</span>/人</p>
+          </li>
+        </ul>
+
+      </div>
+      <div class="visa-small">
+        <ul class="clear">
+          <li>
+            <img src="img/visa2.jpg" alt="">
+            <p>新加坡旅游签证 <span>￥370</span>/人</p>
+          </li>
+          <li>
+            <img src="img/visa3.jpg" alt="">
+            <p>马来西亚旅游签证 <span>￥450</span>/人</p>
+          </li>
+          <li>
+            <img src="img/visa4.jpg" alt="">
+            <p>申根旅游签证 <span>￥999</span>/人</p>
+          </li>
+          <li>
+            <img src="img/visa5.jpg" alt="">
+            <p>美国旅游签证 <span>￥1380</span>/人</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    苏ICP备000号、2014-2017 版权所有
+  </div>
+</body>
+</html>
